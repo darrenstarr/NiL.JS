@@ -21,6 +21,12 @@ build/
 # MSTest test Results
 [Tt]est[Rr]esult*/
 [Bb]uild[Ll]og.*
+NiL\.JS.NetCore/BaseLibrary
+NiL\.JS.NetCore/Core
+NiL\.JS.NetCore/Expressions
+NiL\.JS.NetCore/Extensions
+NiL\.JS.NetCore/Statements
+NiL\.JS.NetCore/Properties
 
 *_i.c
 *_p.c

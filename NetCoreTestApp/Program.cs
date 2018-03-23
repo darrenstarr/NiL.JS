@@ -53,7 +53,7 @@ namespace NetCoreTestApp
 
         static void Main(string[] args)
         {
-            new Module(File.ReadAllText("tests/modules/ftest.js")).Run();
+            new Module(File.ReadAllText("modules/ftest.js")).Run();
         }
 
         private static void sunspider()

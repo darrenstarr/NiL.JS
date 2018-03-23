@@ -182,9 +182,9 @@
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\NiL.JS\NiL.JS.csproj">
-      <Project>{f703d739-bcfa-4515-a963-c95651cb1ec4}</Project>
-      <Name>NiL.JS</Name>
+    <ProjectReference Include="..\NiL.JS.NetCore\NiL.JS.NetCore.csproj">
+      <Project>{12dffb03-2e99-4a57-b763-c9b0b991950e}</Project>
+      <Name>NiL.JS.NetCore</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

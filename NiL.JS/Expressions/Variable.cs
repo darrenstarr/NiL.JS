@@ -118,8 +118,10 @@ namespace NiL.JS.Expressions
                             else
                             {
                                 var code = context.RootContext._owner?._functionDefinition?._body?.Code;
-                                if (code == null)
+                                if (string.IsNullOrWhiteSpace(code))
                                     code = context._module?.Code;
+                                if (string.IsNullOrWhiteSpace(code))
+                                    code = context._owner.Body.Code;
 
                                 ExceptionHelper.ThrowVariableIsNotDefined(_variableName, code, Position, Length, this);
                             }
