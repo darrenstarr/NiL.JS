@@ -435,14 +435,14 @@ namespace NiL.JS.Core.Interop
                 switch (m[0].MemberType)
 #endif
                 {
-                    case MemberTypes.Method:
+                    case Backward.MemberTypes.Method:
                         {
                             var method = (MethodInfo)m[0];
                             r = new MethodProxy(_context, method);
                             r._attributes &= ~(JSValueAttributesInternal.ReadOnly | JSValueAttributesInternal.DoNotDelete | JSValueAttributesInternal.NonConfigurable | JSValueAttributesInternal.DoNotEnumerate);
                             break;
                         }
-                    case MemberTypes.Field:
+                    case Backward.MemberTypes.Field:
                         {
                             var field = (m[0] as FieldInfo);
                             if ((field.Attributes & (FieldAttributes.Literal | FieldAttributes.InitOnly)) != 0
@@ -474,7 +474,7 @@ namespace NiL.JS.Core.Interop
                             }
                             break;
                         }
-                    case MemberTypes.Property:
+                    case Backward.MemberTypes.Property:
                         {
                             var pinfo = (PropertyInfo)m[0];
                             r = new JSValue()
@@ -502,7 +502,7 @@ namespace NiL.JS.Core.Interop
 
                             break;
                         }
-                    case MemberTypes.Event:
+                    case Backward.MemberTypes.Event:
                         {
                             var pinfo = (EventInfo)m[0];
                             r = new JSValue()
@@ -520,7 +520,7 @@ namespace NiL.JS.Core.Interop
                             };
                             break;
                         }
-                    case MemberTypes.TypeInfo:
+                    case Backward.MemberTypes.TypeInfo:
 #if (PORTABLE || NETCORE)
                         {
                             r = GetConstructor((m[0] as TypeInfo).AsType());
